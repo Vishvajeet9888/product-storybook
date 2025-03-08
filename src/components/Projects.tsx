@@ -29,7 +29,7 @@ const projects: Project[] = [
     challenge: "The existing food ordering apps ecosystem has a general user problem, which is decision paralysis and expensive food orders.",
     solution: "Proposed AI chatbot assistant, Surprize ME, and new reward system solutions to improve user engagement.",
     outcome: "The estimated outcome is to be 50% more user engagement with Chatbot and 20% more average order spending in a month.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+    image: "https://images.unsplash.com/photo-1623652621708-e641fe4810f1?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     color: "bg-brand-purple/10 border-brand-purple/20",
   },
 ];
