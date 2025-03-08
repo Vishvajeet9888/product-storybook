@@ -20,7 +20,7 @@ interface Certification {
 const educationItems: Education[] = [
   {
     degree: "Msc in Management",
-    institution: "UCD Michael Smurfit Graduate Business School, Dublin Ireland",
+    institution: "UCD Michael Smurfit Graduate Business School, Ireland",
     period: "2023 - 2024",
     description: "Focused on project management, strategic management and digital innovation. Graduated with honors and received the Global Leadership Programme Award for Leadership initiatives.",
     color: "bg-brand-blue/10 border-brand-blue/20",
@@ -29,7 +29,7 @@ const educationItems: Education[] = [
     degree: "BE in Information Technology",
     institution: "University of Pune, India",
     period: "2016 - 2020",
-    description: "Focused on Software Development, DBMS, UX/UI. Participated in the MIT Product Development Club and led team to finalist position in campus innovation competition.",
+    description: "Focused on Software Development, DBMS, UX/UI. Youth Support Leader, Prayas Youth Forum (National NGO), India (2018 - 2021). Promoted educational and fundraising events to support youth development in underprivileged areas.",
     color: "bg-brand-purple/10 border-brand-purple/20",
   }
 ];
@@ -38,27 +38,21 @@ const certifications: Certification[] = [
   {
     name: "Certified Scrum Product Owner (CSPO)",
     issuer: "Scrum Alliance",
-    year: "2021",
+    year: "2024",
     color: "bg-brand-green/10",
   },
   {
-    name: "Product Management Certification",
-    issuer: "Product School",
-    year: "2019",
+    name: "AI for Product Management Certification",
+    issuer: "Pendo/Mind the product",
+    year: "2024",
     color: "bg-brand-orange/10",
   },
   {
-    name: "Growth Product Manager Certification",
-    issuer: "Reforge",
-    year: "2020",
+    name: "Bloomberg Finance Fundamentals",
+    issuer: "Bloomberg",
+    year: "2025",
     color: "bg-brand-blue/10",
   },
-  {
-    name: "Digital Product Management",
-    issuer: "Cornell University",
-    year: "2018",
-    color: "bg-brand-purple/10",
-  }
 ];
 
 const Education: React.FC = () => {
