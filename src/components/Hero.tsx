@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-8">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground animate-fade-in-down">
             <span className="animate-pulse inline-block w-2 h-2 rounded-full bg-brand-green mr-2"></span>
-            Product Manager Portfolio
+            Vishvajeet Patil Portfolio
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6 max-w-5xl animate-fade-in">
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-8 animate-fade-in animation-delay-200">
-            A strategic product manager focused on building intuitive products that solve real problems and deliver measurable business results.
+            A strategic product management enthusiast focused on building intuitive products that solve real problems and deliver measurable business results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-400">
