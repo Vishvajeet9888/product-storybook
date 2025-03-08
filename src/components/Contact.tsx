@@ -99,8 +99,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Email</h4>
-                    <a href="mailto:contact@productmanager.com" className="text-lg hover:text-brand-blue transition-colors duration-300">
-                      contact@productmanager.com
+                    <a href="mailto:vishvajeet.patil.work@gmail.com" className="text-lg hover:text-brand-blue transition-colors duration-300">
+                      vishvajeet.patil.work@gmail.com
                     </a>
                   </div>
                 </div>
@@ -111,8 +111,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">LinkedIn</h4>
-                    <a href="https://linkedin.com/in/productmanager" target="_blank" rel="noreferrer" className="text-lg hover:text-brand-purple transition-colors duration-300">
-                      linkedin.com/in/productmanager
+                    <a href="https://linkedin.com/in/vishvajeet-patil-ucd/" target="_blank" rel="noreferrer" className="text-lg hover:text-brand-purple transition-colors duration-300">
+                      linkedin.com/in/vishvajeet-patil-ucd/
                     </a>
                   </div>
                 </div>
@@ -123,8 +123,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Phone</h4>
-                    <a href="tel:+11234567890" className="text-lg hover:text-brand-green transition-colors duration-300">
-                      +1 (123) 456-7890
+                    <a href="tel:+353899522469" className="text-lg hover:text-brand-green transition-colors duration-300">
+                      +353 899522469
                     </a>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Location</h4>
                     <p className="text-lg">
-                      San Francisco, California
+                      Dublin, Ireland
                     </p>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ const Contact: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span>9:00 AM - 5:00 PM PST</span>
+                  <span>9:00 AM - 5:00 PM GMT</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Weekends</span>
