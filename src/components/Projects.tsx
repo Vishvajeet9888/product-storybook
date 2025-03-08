@@ -35,16 +35,6 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
     color: "bg-brand-purple/10 border-brand-purple/20",
   },
-  {
-    title: "E-commerce Personalization Engine",
-    description: "Led the development of an AI-powered product recommendation system for an e-commerce platform.",
-    role: "Product Manager",
-    challenge: "Generic product recommendations were resulting in low conversion rates and poor customer engagement.",
-    solution: "Implemented a machine learning algorithm that analyzed user behavior patterns to deliver personalized product suggestions.",
-    outcome: "28% increase in average order value, 45% improvement in click-through rates on recommendations, and 15% growth in revenue.",
-    image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae",
-    color: "bg-brand-green/10 border-brand-green/20",
-  }
 ];
 
 const Projects: React.FC = () => {
