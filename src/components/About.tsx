@@ -38,7 +38,7 @@ const About: React.FC = () => {
           <div className="reveal-item relative">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg relative z-10">
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a" 
+                src="https://unsplash.com/photos/kSh5il6TVOI" 
                 alt="Professional headshot" 
                 className="w-full h-full object-cover"
               />

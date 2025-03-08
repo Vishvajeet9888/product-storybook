@@ -20,16 +20,16 @@ interface Certification {
 const educationItems: Education[] = [
   {
     degree: "Msc in Management",
-    institution: "University College Dublin, Ireland",
+    institution: "UCD Michael Smurfit Graduate Business School, Dublin Ireland",
     period: "2023 - 2024",
-    description: "Focused on project management, strategic management and digitla innovation. Graduated with honors and received the Product Excellence Award for capstone project.",
+    description: "Focused on project management, strategic management and digital innovation. Graduated with honors and received the Global Leadership Programme Award for Leadership initiatives.",
     color: "bg-brand-blue/10 border-brand-blue/20",
   },
   {
-    degree: "B.S. Computer Science",
-    institution: "Massachusetts Institute of Technology",
-    period: "2009 - 2013",
-    description: "Specialized in human-computer interaction and software development. Participated in the MIT Product Development Club and led team to finalist position in campus innovation competition.",
+    degree: "BE in Information Technology",
+    institution: "University of Pune, India",
+    period: "2016 - 2020",
+    description: "Focused on Software Development, DBMS, UX/UI. Participated in the MIT Product Development Club and led team to finalist position in campus innovation competition.",
     color: "bg-brand-purple/10 border-brand-purple/20",
   }
 ];
