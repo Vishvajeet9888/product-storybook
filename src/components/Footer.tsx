@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <div className="font-display font-bold text-2xl mb-4">Portfolio</div>
             <p className="text-gray-300 mb-6 max-w-md">
-              A product management enthusiat focused on creating user-centered digital experiences that drive business growth and customer satisfaction.
+              A product management enthusiast focused on creating user-centered digital experiences that drive business growth and customer satisfaction.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
