@@ -25,10 +25,23 @@ const jobs: Job[] = [
     ],
     color: "bg-brand-blue/10 border-brand-blue/20",
   },
+    {
+    title: "Content Creator and Social Media Marketing",
+    company: "Self Employed",
+    period: "2020 - Present",
+    description: "Managed the development of patient-facing healthcare applications focusing on telehealth and electronic health records.",
+    achievements: [
+      "Spearheaded the development of a telemedicine platform used by over 200 healthcare providers",
+      "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
+      "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
+      "Prioritized roadmap based on stakeholder input and market trends, delivering $1.8M in new business"
+    ],
+    color: "bg-brand-purple/10 border-brand-yellow/20",
+  },
   {
-    title: "Product Manager",
-    company: "HealthTech Solutions",
-    period: "2017 - 2020",
+    title: "Associate Project Manager",
+    company: "Guru Gajanan Builders and Developers",
+    period: "2020 - 2021",
     description: "Managed the development of patient-facing healthcare applications focusing on telehealth and electronic health records.",
     achievements: [
       "Spearheaded the development of a telemedicine platform used by over 200 healthcare providers",
