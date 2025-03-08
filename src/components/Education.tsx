@@ -21,8 +21,8 @@ const educationItems: Education[] = [
   {
     degree: "Msc in Management",
     institution: "University College Dublin, Ireland",
-    period: "2013 - 2015",
-    description: "Focused on product strategy, market analysis, and entrepreneurship. Graduated with honors and received the Product Excellence Award for capstone project.",
+    period: "2023 - 2024",
+    description: "Focused on project management, strategic management and digitla innovation. Graduated with honors and received the Product Excellence Award for capstone project.",
     color: "bg-brand-blue/10 border-brand-blue/20",
   },
   {
