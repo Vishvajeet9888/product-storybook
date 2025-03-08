@@ -15,7 +15,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Retail Inventory Managemenet Product Design",
+    title: "StockSense Product Design",
     description: "Led the design of a Retail Inventory management application to improve and optimise stores inventory with the help of AI.",
     challenge: "Retailers typically wrestle with two huge headaches which are stockouts and overstock.",
     solution: "Derived solution with the help of AI to performe predictive forecasting, automated replenishment, and dynamic pricing so that retailers can move beyond guesswork to a more agile, data-driven approach.",
