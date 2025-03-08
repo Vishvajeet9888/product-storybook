@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-8 animate-fade-in animation-delay-200">
-            A strategic product management enthusiast focused on building intuitive products that solve real problems and deliver measurable business results.
+            A strategic problem solver focused on building intuitive products that solve real problems and deliver measurable business results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-400">
