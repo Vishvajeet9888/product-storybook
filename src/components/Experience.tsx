@@ -36,7 +36,7 @@ const jobs: Job[] = [
       "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
       "Prioritized roadmap based on stakeholder input and market trends, delivering $1.8M in new business"
     ],
-    color: "bg-brand-purple/10 border-brand-yellow/20",
+    color: "bg-brand-yellow/10 border-brand-yellow/20",
   },
   {
     title: "Associate Project Manager",
