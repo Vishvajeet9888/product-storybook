@@ -6,7 +6,6 @@ import { ArrowRight } from 'lucide-react';
 interface Project {
   title: string;
   description: string;
-  role: string;
   challenge: string;
   solution: string;
   outcome: string;
@@ -18,7 +17,6 @@ const projects: Project[] = [
   {
     title: "FinTech Mobile App Redesign",
     description: "Led the redesign of a mobile banking application to improve user experience and increase engagement.",
-    role: "Senior Product Manager",
     challenge: "The existing app had poor user retention and high drop-off rates during key financial transactions.",
     solution: "Conducted extensive user research to identify pain points and developed a simplified user flow with improved navigation and visual design.",
     outcome: "40% increase in daily active users, 25% reduction in support tickets, and 35% improvement in transaction completion rates.",
@@ -28,7 +26,6 @@ const projects: Project[] = [
   {
     title: "Healthcare Patient Portal",
     description: "Developed a patient portal for a major healthcare provider to streamline appointment scheduling and medical record access.",
-    role: "Product Manager",
     challenge: "The existing system required patients to navigate multiple platforms and created confusion and frustration.",
     solution: "Created a unified portal with intuitive interfaces for appointment booking, telehealth, and medical records access.",
     outcome: "90% patient satisfaction rating, 50% reduction in missed appointments, and $2.3M annual savings in operational costs.",
@@ -73,10 +70,6 @@ const Projects: React.FC = () => {
               <p className="text-muted-foreground mb-6">{project.description}</p>
               
               <div className="space-y-6">
-                <div>
-                  <h4 className="font-medium mb-2">Role</h4>
-                  <p className="text-muted-foreground">{project.role}</p>
-                </div>
                 
                 <div>
                   <h4 className="font-medium mb-2">Challenge</h4>
