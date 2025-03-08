@@ -19,7 +19,7 @@ interface Certification {
 
 const educationItems: Education[] = [
   {
-    degree: "MBA, Product Management",
+    degree: "Msc in Management",
     institution: "Stanford Graduate School of Business",
     period: "2013 - 2015",
     description: "Focused on product strategy, market analysis, and entrepreneurship. Graduated with honors and received the Product Excellence Award for capstone project.",
