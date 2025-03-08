@@ -20,7 +20,7 @@ interface Certification {
 const educationItems: Education[] = [
   {
     degree: "Msc in Management",
-    institution: "Stanford Graduate School of Business",
+    institution: "University College Dublin, Ireland",
     period: "2013 - 2015",
     description: "Focused on product strategy, market analysis, and entrepreneurship. Graduated with honors and received the Product Excellence Award for capstone project.",
     color: "bg-brand-blue/10 border-brand-blue/20",
