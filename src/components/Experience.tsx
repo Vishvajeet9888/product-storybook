@@ -13,9 +13,9 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    title: "Senior Product Manager",
-    company: "TechCorp Inc.",
-    period: "2020 - Present",
+    title: "Product Analyst",
+    company: "Tata Consultancy Services, Ltd",
+    period: "2021 - 2024",
     description: "Leading product strategy and execution for the company's flagship fintech solution, overseeing a cross-functional team of designers, engineers, and data analysts.",
     achievements: [
       "Increased monthly active users by 45% through targeted feature enhancements and UX improvements",
@@ -38,18 +38,17 @@ const jobs: Job[] = [
     ],
     color: "bg-brand-purple/10 border-brand-purple/20",
   },
-  {
-    title: "Associate Product Manager",
-    company: "E-Shop Innovations",
-    period: "2015 - 2017",
-    description: "Supported product initiatives for an e-commerce platform, focusing on checkout optimization and user retention strategies.",
-    achievements: [
-      "Redesigned checkout flow resulting in 18% increase in conversion rate and $950K additional revenue",
-      "Created and implemented A/B testing framework for product features and user flows",
-      "Developed product analytics dashboard enabling data-driven decision making across teams",
-      "Collaborated with engineering to prioritize technical debt resolution while maintaining feature delivery"
+   {
+    "title": "Product Analyst Intern",
+    "company": "CodeInfinity",
+    "period": "Dec 2019 – Mar 2020",
+    "description": "Supported product development initiatives by integrating data-driven insights into a scalable recommendation engine. Collaborated with data, UX, and engineering teams to enhance user engagement and streamline feature delivery.",
+    "achievements": [
+      "Developed a scalable location recommendation system that increased user engagement by 25%",
+      "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%",
+      "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%"
     ],
-    color: "bg-brand-green/10 border-brand-green/20",
+    "color": "bg-brand-green/10 border-brand-green/20"
   }
 ];
 
