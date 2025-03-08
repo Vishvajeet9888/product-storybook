@@ -20,7 +20,7 @@ const projects: Project[] = [
     challenge: "Retailers typically wrestle with two huge headaches which are stockouts and overstock.",
     solution: "Derived solution with the help of AI to perform predictive forecasting, automated replenishment, and dynamic pricing so that retailers can move beyond guesswork to a more agile, data-driven approach.",
     outcome: "Estimated to have 90% fewer chances of stockouts and overstock.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
+    image: "https://images.unsplash.com/photo-1741460006532-3f43da7e1d5f?q=80&w=2748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     color: "bg-brand-blue/10 border-brand-blue/20",
   },
   {
