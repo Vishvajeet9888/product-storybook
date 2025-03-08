@@ -13,15 +13,12 @@ const About: React.FC = () => {
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-brand-blue/10 text-brand-blue mb-6">
               About Me
             </div>
-            <h2 className="section-heading">Product Leader Focused on User-Centered Design</h2>
+            <h2 className="section-heading">Hi, I am Vishvajeet Patil, a product management enthusiast and content creator</h2>
             <p className="text-muted-foreground mb-6">
-              I'm a strategic product manager with over 8 years of experience building digital products that users love. My approach combines deep user empathy with data-driven decision making.
+              I'm a passionate Product Manager with over 3 years of experience in driving growth at large-scale businesses. My expertise lies in user-centric design, data-driven decision-making, and agile methodologies. I've successfully led cross-functional teams to deliver innovative solutions that drive business growth and enhance user experience. The other side of me also does Content Creation, where I post about my travel experiences and day-to-day life. I have experience in photography, video production/editing and sales, which I have been doing for a couple of years.
             </p>
             <p className="text-muted-foreground mb-6">
-              Throughout my career, I've led cross-functional teams to deliver innovative solutions across fintech, healthcare, and e-commerce industries. I excel at identifying market opportunities, defining clear product roadmaps, and executing with precision.
-            </p>
-            <p className="text-muted-foreground mb-8">
-              My passion lies in solving complex problems through elegant, intuitive designs that create meaningful impact for users and businesses alike.
+              I believe that true innovation isn't just about creating products; it's about addressing genuine needs and making a lasting impact. I blend thoughtful, strategic insight with practical, hands-on action, always ensuring that the human experience remains at the heart of every decision. My passion is in developing scalable solutions that not only delight users but also drive sustainable business success.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="cta-button">
