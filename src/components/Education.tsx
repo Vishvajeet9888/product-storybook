@@ -29,7 +29,7 @@ const educationItems: Education[] = [
     degree: "BE in Information Technology",
     institution: "University of Pune, India",
     period: "2016 - 2020",
-    description: "Focused on Software Development, DBMS, UX/UI. Youth Support Leader, Prayas Youth Forum (National NGO), India (2018 - 2021). Promoted educational and fundraising events to support youth development in underprivileged areas.",
+    description: "Focused on Software Development, DBMS, UX/UI. Youth Support Leader at Prayas Youth Forum (National NGO), India (2018 - 2021). Promoted educational and fundraising events to support youth development in underprivileged areas.",
     color: "bg-brand-purple/10 border-brand-purple/20",
   }
 ];
