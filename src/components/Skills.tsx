@@ -22,7 +22,7 @@ const skillCategories: SkillCategory[] = [
     icon: <CheckCircle className="text-brand-purple" size={18} />
   },
   {
-    title: "Agile & Stakeholder Management",
+    title: "Agile Project Management",
     color: "bg-brand-green/10 text-brand-green border-brand-green/30",
     skills: [
       "Business Analysis",
@@ -30,6 +30,7 @@ const skillCategories: SkillCategory[] = [
       "Workshop Facilitation",
       "Cross-Functional Collaboration",
       "Conflict Resolution"
+      "Stakeholder Management"
     ],
     icon: <CheckCircle className="text-brand-green" size={18} />
   },
