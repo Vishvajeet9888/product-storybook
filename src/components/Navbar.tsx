@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 md:p-6" aria-label="Global">
         <div className="flex">
           <a href="#" className="flex items-center">
-            <img src={logoImageUrl} alt="Portfolio Logo" className="h-8 w-auto" />
+            <img src={logoImageUrl} alt="Portfolio Logo" className="h-16 w-auto" />
           </a>
         </div>
         <div className="flex md:hidden">
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
       }`}>
         <div className="flex justify-between items-center p-6">
           <a href="#" className="flex items-center">
-            <img src={logoImageUrl} alt="Portfolio Logo" className="h-8 w-auto" />
+            <img src={logoImageUrl} alt="Portfolio Logo" className="h-16 w-auto" />
           </a>
           <button
             type="button"
