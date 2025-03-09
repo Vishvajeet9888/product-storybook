@@ -1,6 +1,5 @@
-
-import React, { useRef } from 'react';
-import { useIntersectionObserver } from '../utils/animations';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { 
   Figma, 
   Github, 
@@ -77,7 +76,7 @@ const skillCategories: SkillCategory[] = [
       "Microsoft Office"
     ],
     icon: (
-      <div className="flex flex-wrap gap-1.5 justify-center mt-3">
+      <div className="flex flex-wrap gap-1.5 justify-center">
         <div className="p-1 bg-white rounded-full shadow-sm">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="#2684FF"/>
@@ -101,61 +100,94 @@ const skillCategories: SkillCategory[] = [
   }
 ];
 
-const Skills: React.FC = () => {
-  const containerRef = useIntersectionObserver({
-    threshold: 0.05,
-    rootMargin: "-10% 0px -10% 0px",
-  });
+// Animation variants for the container and cards using Framer Motion
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    }
+  }
+};
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 20
+    }
+  }
+};
+
+const Skills: React.FC = () => {
   return (
-    <section id="skills" className="bg-secondary/50 py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6" ref={containerRef}>
-        <div className="text-center max-w-3xl mx-auto mb-16 reveal-item">
-          <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground mb-6">
-            My Expertise
-          </div>
-          <h2 className="section-heading">Product Management Skills</h2>
-          <p className="section-subheading">
+    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section header */}
+        <div className="text-center mb-12">
+          <motion.h2 
+            className="text-3xl md:text-5xl font-bold mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Product Management Skills
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-gray-600"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             I combine strategic vision with technical execution to create products that deliver exceptional user experiences and business results.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="space-y-6 md:space-y-12 relative">
+        {/* Grid of skill cards */}
+        <motion.div 
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {skillCategories.map((category, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="reveal-item bg-white rounded-2xl shadow-lg p-6 md:p-8 transition-all duration-300 border-l-4 hover:translate-y-[-8px]"
-              style={{ 
-                animationDelay: `${index * 150}ms`,
-                borderLeftColor: `var(--color-${category.title.toLowerCase().replace(/\s+/g, "-")})`,
-              }}
+              className="relative bg-white rounded-xl p-6 shadow-md transform transition duration-500 hover:-translate-y-2"
+              variants={cardVariants}
+              style={{ borderLeft: `4px solid var(--color-${category.title.toLowerCase().replace(/\s+/g, "-")})` }}
             >
-              <div className="flex flex-col md:flex-row md:items-center gap-6">
-                <div className={`px-4 py-2 rounded-xl ${category.color} border w-fit font-medium mb-2 md:mb-0 text-sm md:text-base`}>
+              <div className="mb-4 flex items-center gap-2">
+                <div className={`px-3 py-1 rounded-full ${category.color} text-sm font-medium`}>
                   {category.title}
                 </div>
-                
-                <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div 
-                      key={skillIndex} 
-                      className="flex items-center gap-2 text-sm text-foreground/80"
-                    >
-                      {category.icon || <CheckCircle className="text-muted-foreground" size={16} />}
-                      <span>{skill}</span>
-                    </div>
-                  ))}
-                </div>
+                {category.title !== "Tools" && category.icon && (
+                  <div className="text-xl">
+                    {category.icon}
+                  </div>
+                )}
               </div>
-              
+              <ul className="space-y-2">
+                {category.skills.map((skill, skillIndex) => (
+                  <li key={skillIndex} className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle size={16} className="text-opacity-70" />
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
               {category.title === "Tools" && (
-                <div className="mt-4 flex justify-center md:justify-start">
+                <div className="mt-6 flex justify-center">
                   {category.icon}
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
