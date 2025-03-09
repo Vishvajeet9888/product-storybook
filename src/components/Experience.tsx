@@ -15,11 +15,11 @@ const jobs: Job[] = [
     title: "Product Analyst",
     company: "Tata Consultancy Services, Ltd",
     period: "2021 - 2024",
-    description: "Leading product strategy and execution for the company's flagship fintech solution, overseeing a cross-functional team of designers, engineers, and data analysts.",
+    description: "Contributing towards product strategy and execution for the company's financial services client project, overseeing a cross-functional team of designers, engineers, and data analysts.",
     achievements: [
-      "Increased monthly active users by 45% through targeted feature enhancements and UX improvements",
-      "Led the successful launch of three major product releases generating $4.2M in new revenue",
-      "Implemented a data-driven product development process that reduced time-to-market by 30%",      
+      "Launched the MVP feature for Internal Financial Data Management System for a US Client, achieving 50% of the projected target of the first quarter of launch.",
+      "Designed process mapping for automating repetitive tasks of trade batch processing, reducing the data processing time by 30%.",
+      "Led the successful launch of feature reducing the the Budget data discrepancy by 90%.",      
     ],
     color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
   },
@@ -27,11 +27,11 @@ const jobs: Job[] = [
     title: "Content Creator and Social Media Marketing",
     company: "Self Employed",
     period: "2020 - Present",
-    description: "Managed the development of patient-facing healthcare applications focusing on telehealth and electronic health records.",
+    description: "Developed and posted content on Instagram and Youtube in the travel domain and marketed own products for brand visibility.",
     achievements: [
-      "Spearheaded the development of a telemedicine platform used by over 200 healthcare providers",
-      "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
-      "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
+      "Created and developed content to enable effective storytelling, improved audience by 5x.",
+      "Conducted market research to identify travel content trends and customer preferences, enhanced user engagement by 75%",
+      "Created online community groups to support early creators and helped with content strategy and ideas.",
     ],
     color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
   },
@@ -39,11 +39,11 @@ const jobs: Job[] = [
     title: "Associate Project Manager",
     company: "Guru Gajanan Builders and Developers",
     period: "2020 - 2021",
-    description: "Managed the development of patient-facing healthcare applications focusing on telehealth and electronic health records.",
+    description: "Managed the development of large-scale real estate projects development plan and optimising client relationship.",
     achievements: [
-      "Spearheaded the development of a telemedicine platform used by over 200 healthcare providers",
-      "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
-      "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
+      "Spearheaded the development of new projects and focused on creating sustainable development.",
+      "Analysed market trends and competitor strategies to identify new business opportunities leading to 10M+ INR investment from partners.",
+      "Managed and optimized client relationships, increasing customer retention and leading to 50% more business.",
     ],
     color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
   },
@@ -53,9 +53,9 @@ const jobs: Job[] = [
     period: "Dec 2019 – Mar 2020",
     description: "Supported product development initiatives by integrating data-driven insights into a scalable recommendation engine. Collaborated with data, UX, and engineering teams to enhance user engagement and streamline feature delivery.",
     achievements: [
-      "Developed a scalable location recommendation system that increased user engagement by 25%",
-      "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%",
-      "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%"
+      "Developed a scalable location recommendation system that increased user engagement by 25%.",
+      "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%.",
+      "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%."
     ],
     color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
   }
