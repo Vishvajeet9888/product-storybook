@@ -68,11 +68,21 @@ const skillCategories: SkillCategory[] = [
       "Github",
       "Microsoft Office"
     ]
-    // Removed icon for Tools category
+    // Icon removed for Tools category
   }
 ];
 
 const Skills: React.FC = () => {
+  // Predefined positions for a pentagon layout (desktop)
+  // Positions are percentages relative to a container with position: relative.
+  const pentagonPositions = [
+    { left: "50%", top: "15%" },   // Top (Category 0)
+    { left: "83.3%", top: "39.2%" }, // Right Upper (Category 1)
+    { left: "70.6%", top: "78.3%" }, // Right Lower (Category 2)
+    { left: "29.4%", top: "78.3%" }, // Left Lower (Category 3)
+    { left: "16.7%", top: "39.2%" }  // Left Upper (Category 4)
+  ];
+
   return (
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
@@ -86,28 +96,55 @@ const Skills: React.FC = () => {
           </p>
         </div>
 
-        {/* Grid of Skill Cards */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Desktop Pentagon Layout */}
+        <div className="hidden md:block relative w-full h-[500px]">
+          {skillCategories.map((category, index) => {
+            const pos = pentagonPositions[index];
+            return (
+              <div
+                key={index}
+                style={{
+                  position: "absolute",
+                  left: pos.left,
+                  top: pos.top,
+                  transform: "translate(-50%, -50%)",
+                }}
+                className="bg-white rounded-xl p-4 shadow-md max-w-xs"
+              >
+                <div className="mb-2">
+                  <div className={`px-2 py-1 rounded-full ${category.color} text-xs font-medium`}>
+                    {category.title}
+                  </div>
+                </div>
+                <ul className="space-y-1 text-xs">
+                  {category.skills.map((skill, i) => (
+                    <li key={i} className="flex items-center gap-1 text-gray-700">
+                      <CheckCircle size={12} className="text-opacity-70" />
+                      <span>{skill}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Mobile Layout: Simple Grid */}
+        <div className="block md:hidden grid gap-6">
           {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl p-6 shadow-md"
-              style={{ borderLeft: `4px solid var(--color-${category.title.toLowerCase().replace(/\s+/g, "-")})` }}
-            >
-              <div className="mb-4 flex items-center gap-2">
-                <div className={`px-3 py-1 rounded-full ${category.color} text-sm font-medium`}>
+            <div key={index} className="bg-white rounded-xl p-4 shadow-md">
+              <div className="mb-2 flex items-center gap-2">
+                <div className={`px-2 py-1 rounded-full ${category.color} text-xs font-medium`}>
                   {category.title}
                 </div>
                 {category.title !== "Tools" && category.icon && (
-                  <div className="text-xl">
-                    {category.icon}
-                  </div>
+                  <div className="text-xs">{category.icon}</div>
                 )}
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-1 text-xs">
                 {category.skills.map((skill, i) => (
-                  <li key={i} className="flex items-center gap-2 text-gray-700">
-                    <CheckCircle size={16} className="text-opacity-70" />
+                  <li key={i} className="flex items-center gap-1 text-gray-700">
+                    <CheckCircle size={12} className="text-opacity-70" />
                     <span>{skill}</span>
                   </li>
                 ))}
