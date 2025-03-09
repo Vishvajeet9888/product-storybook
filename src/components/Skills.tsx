@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
 interface SkillCategory {
@@ -69,76 +68,36 @@ const skillCategories: SkillCategory[] = [
       "Github",
       "Microsoft Office"
     ]
-    // Icon removed for Tools category
+    // Removed icon for Tools category
   }
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: {
-      type: 'spring',
-      stiffness: 100,
-      damping: 20
-    }
-  }
-};
-
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <motion.h2 
-            className="text-3xl md:text-5xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Product Management Skills
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-gray-600"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
+          </h2>
+          <p className="text-lg text-gray-600">
             I combine strategic vision with technical execution to create products that deliver exceptional user experiences and business results.
-          </motion.p>
+          </p>
         </div>
 
         {/* Grid of Skill Cards */}
-        <motion.div 
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => (
-            <motion.div 
-              key={index}
-              className="relative bg-white rounded-xl p-6 shadow-md transform transition duration-500 hover:-translate-y-2"
-              variants={cardVariants}
+            <div 
+              key={index} 
+              className="bg-white rounded-xl p-6 shadow-md"
               style={{ borderLeft: `4px solid var(--color-${category.title.toLowerCase().replace(/\s+/g, "-")})` }}
             >
               <div className="mb-4 flex items-center gap-2">
                 <div className={`px-3 py-1 rounded-full ${category.color} text-sm font-medium`}>
                   {category.title}
                 </div>
-                {/* Only render icon for categories other than "Tools" */}
                 {category.title !== "Tools" && category.icon && (
                   <div className="text-xl">
                     {category.icon}
@@ -153,9 +112,9 @@ const Skills: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
