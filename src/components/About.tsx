@@ -13,7 +13,7 @@ const About: React.FC = () => {
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-brand-blue/10 text-brand-blue mb-6">
               About Me
             </div>
-            <h2 className="section-heading">Hi, I am Vishvajeet Patil, a product management enthusiast and content creator</h2>
+            <h2 className="section-heading">Hi 🙋🏻‍♂️, I am Vishvajeet Patil, a product management enthusiast and content creator</h2>
             <p className="text-muted-foreground mb-6">
               I'm a passionate Product Manager with over 3 years of experience in driving growth at large-scale businesses. My expertise lies in user-centric design, data-driven decision-making, and agile methodologies. I've successfully led cross-functional teams to deliver innovative solutions that drive business growth and enhance user experience. The other side of me also does Content Creation, where I post about my travel experiences and day-to-day life. I have experience in photography, video production/editing and sales, which I have been doing for a couple of years.
             </p>
