@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -29,6 +28,8 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const logoImageUrl = "https://png.pngtree.com/png-vector/20230816/ourmid/pngtree-sticker-mcfly-boy-character-vector-sticker-clipart-png-image_6977746.png";
+  
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
       scrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'
@@ -36,7 +37,7 @@ const Navbar: React.FC = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 md:p-6" aria-label="Global">
         <div className="flex">
           <a href="#" className="flex items-center">
-            <span className="text-xl font-display font-bold tracking-tight">Portfolio</span>
+            <img src={logoImageUrl} alt="Portfolio Logo" className="h-16 w-auto" />
           </a>
         </div>
         <div className="flex md:hidden">
@@ -75,7 +76,9 @@ const Navbar: React.FC = () => {
         mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex justify-between items-center p-6">
-          <a href="#" className="text-xl font-display font-bold">Portfolio</a>
+          <a href="#" className="flex items-center">
+            <img src={logoImageUrl} alt="Portfolio Logo" className="h-16 w-auto" />
+          </a>
           <button
             type="button"
             className="p-2 text-gray-700 rounded-md"
