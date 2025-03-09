@@ -5,7 +5,7 @@ import {
   Figma, 
   Github, 
   FileSpreadsheet, 
-  FilePresentation 
+  Presentation 
 } from 'lucide-react';
 
 interface SkillCategory {
@@ -108,7 +108,7 @@ const skillCategories: SkillCategory[] = [
           <FileSpreadsheet size={24} color="#217346" />
         </div>
         <div className="p-2 bg-white rounded-full shadow-sm">
-          <FilePresentation size={24} color="#B7472A" />
+          <Presentation size={24} color="#B7472A" />
         </div>
       </div>
     )
