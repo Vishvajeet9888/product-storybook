@@ -20,8 +20,7 @@ const jobs: Job[] = [
     achievements: [
       "Increased monthly active users by 45% through targeted feature enhancements and UX improvements",
       "Led the successful launch of three major product releases generating $4.2M in new revenue",
-      "Implemented a data-driven product development process that reduced time-to-market by 30%",
-      "Collaborated with marketing to develop growth strategies resulting in 25% user acquisition increase"
+      "Implemented a data-driven product development process that reduced time-to-market by 30%",      
     ],
     color: "bg-brand-blue/10 border-brand-blue/20",
   },
@@ -34,7 +33,6 @@ const jobs: Job[] = [
       "Spearheaded the development of a telemedicine platform used by over 200 healthcare providers",
       "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
       "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
-      "Prioritized roadmap based on stakeholder input and market trends, delivering $1.8M in new business"
     ],
     color: "bg-brand-green/10 border-brand-green/20",
   },
@@ -47,7 +45,6 @@ const jobs: Job[] = [
       "Spearheaded the development of a telemedicine platform used by over 200 healthcare providers",
       "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
       "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
-      "Prioritized roadmap based on stakeholder input and market trends, delivering $1.8M in new business"
     ],
     color: "bg-brand-purple/10 border-brand-purple/20",
   },
