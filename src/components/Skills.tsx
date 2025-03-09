@@ -56,11 +56,11 @@ const skillCategories: SkillCategory[] = [
 
 const Skills: React.FC = () => {
   const pentagonPositions = [
-    { left: "50%", top: "5%" },     // Top (Strategic Planning)
-    { left: "85%", top: "35%" },    // Upper Right (Technical Proficiency)
-    { left: "65%", top: "80%" },    // Lower Right (Agile & Stakeholder Management)
-    { left: "35%", top: "80%" },    // Lower Left (UX & User Research) --> Moved slightly
-    { left: "15%", top: "35%" }     // Upper Left (Tools)
+    { left: "50%", top: "10%" },     // Top
+    { left: "87%", top: "35%" },     // Upper Right
+    { left: "70%", top: "80%" },     // Lower Right
+    { left: "30%", top: "80%" },     // Lower Left
+    { left: "13%", top: "35%" }      // Upper Left
   ];
 
   return (
@@ -76,11 +76,11 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Pentagon Layout for All Devices */}
-        <div className="relative w-full h-[280px] md:h-[500px]">
+        <div className="relative w-full h-[350px] md:h-[500px]">
           {/* Pentagon Shape */}
           <svg
             viewBox="0 0 100 100"
-            className="absolute inset-0 w-[60%] md:w-full h-[60%] md:h-full mx-auto"
+            className="absolute inset-0 w-[70%] md:w-full h-[70%] md:h-full mx-auto"
           >
             <polygon
               points="50,10 90,40 75,85 25,85 10,40"
@@ -99,27 +99,22 @@ const Skills: React.FC = () => {
                   top: pos.top,
                   transform: "translate(-50%, -50%)",
                 }}
-                className="bg-white rounded-xl p-2 md:p-4 shadow-md max-w-[75px] md:max-w-xs"
+                className="bg-white rounded-xl p-2 md:p-4 shadow-md max-w-[80px] md:max-w-xs"
               >
                 <div className="mb-1 md:mb-2">
                   <div
-                    className={`px-1 py-0.5 md:px-2 md:py-1 rounded-full ${category.color} text-[9px] md:text-xs font-medium`}
+                    className={`px-1 py-0.5 md:px-2 md:py-1 rounded-full ${category.color} text-[10px] md:text-xs font-medium`}
                   >
                     {category.title}
                   </div>
                 </div>
-                <ul className="space-y-0.5 md:space-y-1 text-[8px] md:text-xs">
-                  {category.skills.slice(0, 4).map((skill, i) => (
+                <ul className="space-y-0.5 md:space-y-1 text-[9px] md:text-xs">
+                  {category.skills.map((skill, i) => (
                     <li key={i} className="flex items-center gap-1 text-gray-700">
                       <CheckCircle size={10} className="text-opacity-70" />
                       <span>{skill}</span>
                     </li>
                   ))}
-                  {category.skills.length > 4 && (
-                    <li className="text-gray-500 italic text-[7px] md:text-xs">
-                      + More Skills
-                    </li>
-                  )}
                 </ul>
               </div>
             );
