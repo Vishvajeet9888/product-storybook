@@ -21,7 +21,7 @@ const jobs: Job[] = [
       "Led the successful launch of three major product releases generating $4.2M in new revenue",
       "Implemented a data-driven product development process that reduced time-to-market by 30%",      
     ],
-    color: "bg-blue-500 border-blue-500", // Solid blue
+    color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
   },
   {
     title: "Content Creator and Social Media Marketing",
@@ -33,7 +33,7 @@ const jobs: Job[] = [
       "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
       "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
     ],
-    color: "bg-purple-500 border-purple-500", // Solid purple
+    color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
   },
   {
     title: "Associate Project Manager",
@@ -45,7 +45,7 @@ const jobs: Job[] = [
       "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
       "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
     ],
-    color: "bg-blue-500 border-blue-500", // Solid blue
+    color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
   },
   {
     title: "Product Analyst Intern",
@@ -57,7 +57,7 @@ const jobs: Job[] = [
       "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%",
       "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%"
     ],
-    color: "bg-purple-500 border-purple-500", // Solid purple
+    color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
   }
 ];
 
@@ -86,9 +86,7 @@ const Experience: React.FC = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                 <div>
-                  <h3 className="text-xl font-display font-semibold text-black">
-                    {job.title}
-                  </h3>
+                  <h3 className="text-xl font-display font-semibold">{job.title}</h3>
                   <div className="text-lg text-muted-foreground">{job.company}</div>
                 </div>
                 <div className="mt-2 md:mt-0 text-sm font-medium bg-white/50 px-3 py-1 rounded-full inline-flex">
