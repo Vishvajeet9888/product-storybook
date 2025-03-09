@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-8">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground animate-fade-in-down">
             <span className="animate-pulse inline-block w-2 h-2 rounded-full bg-brand-green mr-2"></span>
-            Vishvajeet Patil Portfolio
+            Vishvajeet Patil's Portfolio
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6 max-w-5xl animate-fade-in">
