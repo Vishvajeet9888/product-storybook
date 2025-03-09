@@ -9,7 +9,19 @@ export function useIntersectionObserver(options = {}) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('reveal');
-          observer.unobserve(entry.target);
+          
+          // Add a stacking effect for skills sections
+          if (entry.target.parentElement?.classList.contains('space-y-6') || 
+              entry.target.parentElement?.classList.contains('space-y-12')) {
+            const index = Array.from(entry.target.parentElement.children).indexOf(entry.target);
+            entry.target.style.zIndex = `${index + 1}`;
+          }
+          
+          // Don't unobserve to allow animation to replay when scrolling back
+          // observer.unobserve(entry.target);
+        } else {
+          // Optional: remove the class when out of view for re-animation
+          // entry.target.classList.remove('reveal');
         }
       });
     }, {
