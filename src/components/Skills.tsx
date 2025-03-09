@@ -1,12 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Figma, 
-  Github, 
-  FileSpreadsheet, 
-  Presentation,
-  CheckCircle
-} from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 interface SkillCategory {
   title: string;
@@ -74,48 +68,27 @@ const skillCategories: SkillCategory[] = [
       "Miro",
       "Github",
       "Microsoft Office"
-    ],
-    icon: (
-      <div className="flex flex-wrap gap-1.5 justify-center">
-        <div className="p-1 bg-white rounded-full shadow-sm">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="#2684FF"/>
-            <path d="M12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21C16.97 21 21 16.97 21 12C21 7.03 16.97 3 12 3ZM12 19C8.13 19 5 15.87 5 12C5 8.13 8.13 5 12 5C15.87 5 19 8.13 19 12C19 15.87 15.87 19 12 19Z" fill="#2684FF"/>
-          </svg>
-        </div>
-        <div className="p-1 bg-white rounded-full shadow-sm">
-          <Figma size={16} color="#F24E1E" />
-        </div>
-        <div className="p-1 bg-white rounded-full shadow-sm">
-          <Github size={16} color="#333" />
-        </div>
-        <div className="p-1 bg-white rounded-full shadow-sm">
-          <FileSpreadsheet size={16} color="#217346" />
-        </div>
-        <div className="p-1 bg-white rounded-full shadow-sm">
-          <Presentation size={16} color="#B7472A" />
-        </div>
-      </div>
-    )
+    ]
+    // Icon removed for Tools category
   }
 ];
 
-// Animation variants for the container and cards using Framer Motion
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.2
     }
   }
 };
+
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 
     y: 0, 
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 100,
       damping: 20
     }
@@ -126,7 +99,7 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section header */}
+        {/* Section Header */}
         <div className="text-center mb-12">
           <motion.h2 
             className="text-3xl md:text-5xl font-bold mb-4"
@@ -146,7 +119,7 @@ const Skills: React.FC = () => {
           </motion.p>
         </div>
 
-        {/* Grid of skill cards */}
+        {/* Grid of Skill Cards */}
         <motion.div 
           className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
@@ -165,6 +138,7 @@ const Skills: React.FC = () => {
                 <div className={`px-3 py-1 rounded-full ${category.color} text-sm font-medium`}>
                   {category.title}
                 </div>
+                {/* Only render icon for categories other than "Tools" */}
                 {category.title !== "Tools" && category.icon && (
                   <div className="text-xl">
                     {category.icon}
@@ -172,18 +146,13 @@ const Skills: React.FC = () => {
                 )}
               </div>
               <ul className="space-y-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <li key={skillIndex} className="flex items-center gap-2 text-gray-700">
+                {category.skills.map((skill, i) => (
+                  <li key={i} className="flex items-center gap-2 text-gray-700">
                     <CheckCircle size={16} className="text-opacity-70" />
                     <span>{skill}</span>
                   </li>
                 ))}
               </ul>
-              {category.title === "Tools" && (
-                <div className="mt-6 flex justify-center">
-                  {category.icon}
-                </div>
-              )}
             </motion.div>
           ))}
         </motion.div>
