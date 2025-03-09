@@ -69,7 +69,7 @@ const Skills: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Product Management Skills
+            My Skills
           </h2>
           <p className="text-lg text-gray-600">
             I combine strategic vision with technical execution to create products that deliver exceptional user experiences and business results.
