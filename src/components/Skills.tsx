@@ -25,7 +25,7 @@ const skillCategories: SkillCategory[] = [
       "Product Roadmapping", 
       "Market Research & Analysis"
     ],
-    position: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    position: "top-0 left-1/2 -translate-x-1/2 -translate-y-[110%]"
   },
   {
     title: "Technical Proficiency",
@@ -36,7 +36,7 @@ const skillCategories: SkillCategory[] = [
       "Pipeline Designing (Informatica)",
       "Data Warehousing"
     ],
-    position: "top-1/4 right-0 translate-x-1/2 -translate-y-1/4"
+    position: "top-1/4 right-0 translate-x-[110%]"
   },
   {
     title: "Agile & Stakeholder Management",
@@ -48,7 +48,7 @@ const skillCategories: SkillCategory[] = [
       "Cross-Functional Collaboration",
       "Conflict Resolution"
     ],
-    position: "bottom-0 right-1/4 translate-x-1/4 translate-y-1/2"
+    position: "bottom-0 right-1/4 translate-x-[30%] translate-y-[110%]"
   },
   {
     title: "UX & User Research",
@@ -62,7 +62,7 @@ const skillCategories: SkillCategory[] = [
       "A/B Testing",
       "User Interviews"
     ],
-    position: "bottom-0 left-1/4 -translate-x-1/4 translate-y-1/2"
+    position: "bottom-0 left-1/4 -translate-x-[30%] translate-y-[110%]"
   },
   {
     title: "Tools",
@@ -76,7 +76,7 @@ const skillCategories: SkillCategory[] = [
       "Github",
       "Microsoft Office"
     ],
-    position: "top-1/4 left-0 -translate-x-1/2 -translate-y-1/4",
+    position: "top-1/4 left-0 -translate-x-[110%]",
     icon: (
       <div className="flex flex-wrap gap-3 justify-center mt-3">
         <div className="p-2 bg-white rounded-full shadow-sm">
