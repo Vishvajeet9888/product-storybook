@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 
@@ -22,9 +21,9 @@ const jobs: Job[] = [
       "Led the successful launch of three major product releases generating $4.2M in new revenue",
       "Implemented a data-driven product development process that reduced time-to-market by 30%",      
     ],
-    color: "bg-brand-blue/10 border-brand-blue/20",
+    color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
   },
-    {
+  {
     title: "Content Creator and Social Media Marketing",
     company: "Self Employed",
     period: "2020 - Present",
@@ -34,7 +33,7 @@ const jobs: Job[] = [
       "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
       "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
     ],
-    color: "bg-brand-green/10 border-brand-green/20",
+    color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
   },
   {
     title: "Associate Project Manager",
@@ -46,19 +45,19 @@ const jobs: Job[] = [
       "Reduced patient onboarding time by 65% through streamlined UX and automated processes",
       "Conducted extensive user research resulting in a redesign that improved patient satisfaction by 35%",
     ],
-    color: "bg-brand-purple/10 border-brand-purple/20",
+    color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
   },
-   {
-    "title": "Product Analyst Intern",
-    "company": "CodeInfinity",
-    "period": "Dec 2019 – Mar 2020",
-    "description": "Supported product development initiatives by integrating data-driven insights into a scalable recommendation engine. Collaborated with data, UX, and engineering teams to enhance user engagement and streamline feature delivery.",
-    "achievements": [
+  {
+    title: "Product Analyst Intern",
+    company: "CodeInfinity",
+    period: "Dec 2019 – Mar 2020",
+    description: "Supported product development initiatives by integrating data-driven insights into a scalable recommendation engine. Collaborated with data, UX, and engineering teams to enhance user engagement and streamline feature delivery.",
+    achievements: [
       "Developed a scalable location recommendation system that increased user engagement by 25%",
       "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%",
       "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%"
     ],
-    "color": "bg-brand-green/10 border-brand-green/20"
+    color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
   }
 ];
 
