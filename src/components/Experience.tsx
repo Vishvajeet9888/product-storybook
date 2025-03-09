@@ -86,7 +86,9 @@ const Experience: React.FC = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                 <div>
-                  <h3 className="text-xl font-display font-semibold">{job.title}</h3>
+                  <h3 className="text-xl font-display font-semibold text-black">
+                    {job.title}
+                  </h3>
                   <div className="text-lg text-muted-foreground">{job.company}</div>
                 </div>
                 <div className="mt-2 md:mt-0 text-sm font-medium bg-white/50 px-3 py-1 rounded-full inline-flex">
