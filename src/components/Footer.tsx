@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Linkedin, Mail, Github, Twitter } from 'lucide-react';
 
@@ -56,13 +55,14 @@ const Footer: React.FC = () => {
             <h3 className="font-medium text-lg mb-4">Download</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Resume</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Portfolio PDF</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                <a 
+                  href="https://drive.google.com/drive/folders/1jIhMOQTi6MUcGvIqfYjKxYuUrSltbbSj?usp=sharing" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                >
+                  Resume
+                </a>
               </li>
             </ul>
           </div>
