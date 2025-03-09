@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 import { ArrowRight } from 'lucide-react';
@@ -11,6 +10,7 @@ interface Project {
   outcome: string;
   image: string;
   color: string;
+  caseStudyLink: string; // Added new property
 }
 
 const projects: Project[] = [
@@ -22,6 +22,7 @@ const projects: Project[] = [
     outcome: "Estimated to have 90% fewer chances of stockouts and overstock.",
     image: "https://images.unsplash.com/photo-1741460369135-07e2c4a9be39?q=80&w=2748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     color: "bg-brand-blue/10 border-brand-blue/20",
+    caseStudyLink: "https://glow-jelly-f44.notion.site/StockSense-1a57d6bc47188083bcc4c37aea537a07?pvs=4"
   },
   {
     title: "Just Eat Product Case Study",
@@ -31,6 +32,7 @@ const projects: Project[] = [
     outcome: "The estimated outcome is to be 50% more user engagement with Chatbot and 20% more average order spending in a month.",
     image: "https://images.unsplash.com/photo-1623652621708-e641fe4810f1?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     color: "bg-brand-purple/10 border-brand-purple/20",
+    caseStudyLink: "https://drive.google.com/drive/folders/17NusSCsx0r9tpPHteZ3R2WhW0sGPJjFB?usp=sharing"
   },
 ];
 
@@ -70,7 +72,6 @@ const Projects: React.FC = () => {
               <p className="text-muted-foreground mb-6">{project.description}</p>
               
               <div className="space-y-6">
-                
                 <div>
                   <h4 className="font-medium mb-2">Challenge</h4>
                   <p className="text-muted-foreground">{project.challenge}</p>
@@ -88,10 +89,15 @@ const Projects: React.FC = () => {
               </div>
               
               <div className="mt-8">
-                <button className="group inline-flex items-center text-sm font-medium text-foreground hover:text-primary/80 transition-all duration-300">
-                  View Full Case Study
+                <a
+                  href={project.caseStudyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center text-sm font-medium text-foreground hover:text-primary/80 transition-all duration-300"
+                >
+                  {index === 0 ? 'View Full Project' : 'View Full Case Study'}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
