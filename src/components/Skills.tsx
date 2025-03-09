@@ -73,14 +73,14 @@ const skillCategories: SkillCategory[] = [
 ];
 
 const Skills: React.FC = () => {
-  // Predefined positions for a pentagon layout (desktop)
-  // Positions are percentages relative to a container with position: relative.
+  // Predefined positions for each category at the vertices of a pentagon.
+  // Positions are defined as percentages relative to the container.
   const pentagonPositions = [
-    { left: "50%", top: "15%" },   // Top (Category 0)
-    { left: "83.3%", top: "39.2%" }, // Right Upper (Category 1)
-    { left: "70.6%", top: "78.3%" }, // Right Lower (Category 2)
-    { left: "29.4%", top: "78.3%" }, // Left Lower (Category 3)
-    { left: "16.7%", top: "39.2%" }  // Left Upper (Category 4)
+    { left: "50%", top: "15%" },    // Top vertex (Category 0)
+    { left: "83.3%", top: "39.2%" },  // Right Upper vertex (Category 1)
+    { left: "70.6%", top: "78.3%" },  // Right Lower vertex (Category 2)
+    { left: "29.4%", top: "78.3%" },  // Left Lower vertex (Category 3)
+    { left: "16.7%", top: "39.2%" }   // Left Upper vertex (Category 4)
   ];
 
   return (
@@ -98,6 +98,10 @@ const Skills: React.FC = () => {
 
         {/* Desktop Pentagon Layout */}
         <div className="hidden md:block relative w-full h-[500px]">
+          {/* Draw the pentagon shape using an SVG */}
+          <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
+            <polygon points="50,10 90,40 75,85 25,85 10,40" className="fill-none stroke-gray-300 stroke-2" />
+          </svg>
           {skillCategories.map((category, index) => {
             const pos = pentagonPositions[index];
             return (
