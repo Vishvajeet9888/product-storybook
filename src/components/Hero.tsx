@@ -1,16 +1,12 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Animation */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="w-full h-full animate-pulse pattern"></div>
-      </div>
-
-      <div className="absolute inset-0 bg-gradient-radial from-brand-blue/5 to-transparent z-10"></div>
-      <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 text-center relative z-20">
+      <div className="absolute inset-0 bg-gradient-radial from-brand-blue/5 to-transparent"></div>
+      <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 text-center relative z-10">
         <div className="flex flex-col items-center justify-center gap-8">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground animate-fade-in-down">
             <span className="animate-pulse inline-block w-2 h-2 rounded-full bg-brand-green mr-2"></span>
@@ -37,7 +33,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#about" className="flex flex-col items-center text-sm text-muted-foreground">
           <span>Scroll Down</span>
           <svg className="w-6 h-6 mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -45,20 +41,6 @@ const Hero: React.FC = () => {
           </svg>
         </a>
       </div>
-
-      {/* CSS Animation for Background */}
-      <style>{`
-        .pattern {
-          background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 1%);
-          background-size: 40px 40px;
-          animation: movePattern 12s linear infinite;
-        }
-
-        @keyframes movePattern {
-          from { transform: translateX(0); }
-          to { transform: translateX(-100px); }
-        }
-      `}</style>
     </section>
   );
 };
