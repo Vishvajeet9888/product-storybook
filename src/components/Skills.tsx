@@ -29,7 +29,7 @@ const skillCategories: SkillCategory[] = [
       "Product Backlog Grooming",
       "Workshop Facilitation",
       "Cross-Functional Collaboration",
-      "Conflict Resolution"
+      "Conflict Resolution",
       "Stakeholder Management"
     ],
     icon: <CheckCircle className="text-brand-green" size={18} />
