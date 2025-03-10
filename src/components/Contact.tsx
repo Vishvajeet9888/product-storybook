@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Weekends</span>
-                  <span className="text-right">By appointment</span>
+                  <span className="text-left">By appointment</span>
                 </div>
               </div>
             </div>
