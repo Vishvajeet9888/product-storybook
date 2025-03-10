@@ -159,7 +159,8 @@ const Skills: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>
+        {`
         .skill-card {
           opacity: 0;
           transform: translateY(30px);
@@ -176,7 +177,8 @@ const Skills: React.FC = () => {
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
           }
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
