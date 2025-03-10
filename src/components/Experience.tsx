@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 
@@ -21,7 +22,7 @@ const jobs: Job[] = [
       "Designed process mapping for automating repetitive tasks of trade batch processing, reducing the data processing time by 30%.",
       "Led the successful launch of feature reducing the the Budget data discrepancy by 90%.",      
     ],
-    color: "color: "bg-[#6D28D9] border-[#6D28D9]", // Updated to cobalt blue
+    color: "bg-brand-blue border-brand-blue", // Changed to brand-blue from Hero section
   },
   {
     title: "Content Creator and Social Media Marketing",
@@ -33,7 +34,7 @@ const jobs: Job[] = [
       "Conducted market research to identify travel content trends and customer preferences, enhanced user engagement by 75%",
       "Created online community groups to support early creators and helped with content strategy and ideas.",
     ],
-    color: "bg-[#6D28D9]/10 border-[#6D28D9]/20", // Kept the same purple
+    color: "bg-brand-purple/10 border-brand-purple/20", // Changed to brand-purple from Hero section
   },
   {
     title: "Associate Project Manager",
@@ -45,7 +46,7 @@ const jobs: Job[] = [
       "Analysed market trends and competitor strategies to identify new business opportunities leading to 10M+ INR investment from partners.",
       "Managed and optimized client relationships, increasing customer retention and leading to 50% more business.",
     ],
-    color: "bg-[#0047AB]/10 border-[#0047AB]/20", // Updated to cobalt blue
+    color: "bg-brand-blue/10 border-brand-blue/20", // Changed to brand-blue from Hero section
   },
   {
     title: "Product Analyst Intern",
@@ -57,7 +58,7 @@ const jobs: Job[] = [
       "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%.",
       "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%."
     ],
-    color: "bg-[#6D28D9]/10 border-[#6D28D9]/20", // Kept the same purple
+    color: "bg-brand-purple/10 border-brand-purple/20", // Changed to brand-purple from Hero section
   }
 ];
 
@@ -71,8 +72,8 @@ const Experience: React.FC = () => {
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground mb-6">
             Work History
           </div>
-          <h2 className="section-heading text-black">Professional Experience</h2> {/* Text color changed to black */}
-          <p className="section-subheading text-black"> {/* Text color changed to black */}
+          <h2 className="section-heading text-black">Professional Experience</h2>
+          <p className="section-subheading text-black">
             My career journey has equipped me with diverse experience across industries and product types.
           </p>
         </div>
@@ -86,24 +87,24 @@ const Experience: React.FC = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                 <div>
-                  <h3 className="text-xl font-display font-semibold text-black">{job.title}</h3> {/* Text color changed to black */}
-                  <div className="text-lg text-black">{job.company}</div> {/* Text color changed to black */}
+                  <h3 className="text-xl font-display font-semibold text-black">{job.title}</h3>
+                  <div className="text-lg text-black">{job.company}</div>
                 </div>
-                <div className="mt-2 md:mt-0 text-sm font-medium bg-white/50 px-3 py-1 rounded-full inline-flex text-black"> {/* Text color changed to black */}
+                <div className="mt-2 md:mt-0 text-sm font-medium bg-white/50 px-3 py-1 rounded-full inline-flex text-black">
                   {job.period}
                 </div>
               </div>
               
-              <p className="text-black mb-6"> {/* Text color changed to black */}
+              <p className="text-black mb-6">
                 {job.description}
               </p>
               
-              <h4 className="font-medium mb-4 text-black">Key Achievements:</h4> {/* Text color changed to black */}
+              <h4 className="font-medium mb-4 text-black">Key Achievements:</h4>
               <ul className="space-y-3">
                 {job.achievements.map((achievement, i) => (
                   <li key={i} className="flex items-start">
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-foreground mt-2 mr-3"></span>
-                    <span className="text-black">{achievement}</span> {/* Text color changed to black */}
+                    <span className="text-black">{achievement}</span>
                   </li>
                 ))}
               </ul>
