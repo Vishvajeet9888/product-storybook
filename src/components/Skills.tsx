@@ -1,8 +1,8 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, Code, BarChart, Users, Lightbulb, Wrench } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useIntersectionObserver } from '@/utils/animations';
+import ParticleBackground from './ParticleBackground';
 
 interface SkillCategory {
   title: string;
@@ -65,7 +65,8 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      {/* Background decoration */}
+      <ParticleBackground className="opacity-30" />
+      
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 -left-24 w-96 h-96 bg-brand-purple/5 rounded-full blur-3xl"></div>
@@ -121,7 +122,6 @@ const Skills: React.FC = () => {
           ))}
         </div>
 
-        {/* Skills meter / progress visualization */}
         <div className="mt-16 reveal-item opacity-0">
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
             <h3 className="text-xl font-bold mb-8 text-center">Proficiency Overview</h3>

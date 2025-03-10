@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
+import ParticleBackground from './ParticleBackground';
 
 interface Education {
   degree: string;
@@ -59,8 +59,9 @@ const Education: React.FC = () => {
   const containerRef = useIntersectionObserver();
 
   return (
-    <section id="education" className="section-container" ref={containerRef}>
-      <div className="text-center max-w-3xl mx-auto mb-16 reveal-item">
+    <section id="education" className="section-container relative" ref={containerRef}>
+      <ParticleBackground className="opacity-30" />
+      <div className="text-center max-w-3xl mx-auto mb-16 reveal-item relative z-10">
         <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground mb-6">
           Academic Background
         </div>
@@ -70,7 +71,7 @@ const Education: React.FC = () => {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10">
         <div className="space-y-8 reveal-item">
           <h3 className="text-2xl font-display font-semibold mb-8">Formal Education</h3>
           

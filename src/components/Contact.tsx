@@ -1,13 +1,15 @@
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
-import { Mail, Linkedin, Phone, MapPin, Instagram } from 'lucide-react'; // Added Instagram icon
+import { Mail, Linkedin, Phone, MapPin, Instagram } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const Contact: React.FC = () => {
   const containerRef = useIntersectionObserver();
 
   return (
-    <section id="contact" className="bg-secondary/50">
-      <div className="section-container" ref={containerRef}>
+    <section id="contact" className="bg-secondary/50 relative">
+      <ParticleBackground className="opacity-20" />
+      <div className="section-container relative z-10" ref={containerRef}>
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-item">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground mb-6">
             Get In Touch
@@ -127,8 +129,7 @@ const Contact: React.FC = () => {
                     </a>
                   </div>
                 </div>
-
-                {/* Moved Instagram Contact Information above Location */}
+                
                 <div className="flex items-start">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-500/10 text-pink-500">
                     <Instagram className="h-5 w-5" />

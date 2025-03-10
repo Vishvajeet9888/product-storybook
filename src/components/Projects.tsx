@@ -1,6 +1,7 @@
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 import { ArrowRight } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 interface Project {
   title: string;
@@ -40,16 +41,16 @@ const Projects: React.FC = () => {
   const containerRef = useIntersectionObserver();
 
   return (
-    <section id="projects" className="section-container" ref={containerRef}>
-      <div className="text-center max-w-3xl mx-auto mb-16 reveal-item">
-        {/* Removed the "Portfolio Showcase" div */}
+    <section id="projects" className="section-container relative" ref={containerRef}>
+      <ParticleBackground className="opacity-30" />
+      <div className="text-center max-w-3xl mx-auto mb-16 reveal-item relative z-10">
         <h2 className="section-heading">Projects & Case Studies</h2>
         <p className="section-subheading">
           A selection of my best work that demonstrates my approach to product management and problem-solving.
         </p>
       </div>
       
-      <div className="space-y-24">
+      <div className="space-y-24 relative z-10">
         {projects.map((project, index) => (
           <div 
             key={index} 

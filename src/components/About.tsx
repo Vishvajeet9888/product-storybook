@@ -1,13 +1,14 @@
-
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
+import ParticleBackground from './ParticleBackground';
 
 const About: React.FC = () => {
   const containerRef = useIntersectionObserver();
 
   return (
-    <section id="about" className="section-container" ref={containerRef}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <section id="about" className="section-container relative" ref={containerRef}>
+      <ParticleBackground className="opacity-30" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
         <div className="order-2 md:order-1">
           <div className="reveal-item">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-brand-blue/10 text-brand-blue mb-6">
