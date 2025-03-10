@@ -21,7 +21,7 @@ const jobs: Job[] = [
       "Designed process mapping for automating repetitive tasks of trade batch processing, reducing the data processing time by 30%.",
       "Led the successful launch of feature reducing the the Budget data discrepancy by 90%.",      
     ],
-    color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
+    color: "bg-[#1E3A8A]/10 border-[#1E3A8A]/20", // Updated to a darker blue
   },
   {
     title: "Content Creator and Social Media Marketing",
@@ -33,7 +33,7 @@ const jobs: Job[] = [
       "Conducted market research to identify travel content trends and customer preferences, enhanced user engagement by 75%",
       "Created online community groups to support early creators and helped with content strategy and ideas.",
     ],
-    color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
+    color: "bg-[#6D28D9]/10 border-[#6D28D9]/20", // Updated to a darker purple
   },
   {
     title: "Associate Project Manager",
@@ -45,7 +45,7 @@ const jobs: Job[] = [
       "Analysed market trends and competitor strategies to identify new business opportunities leading to 10M+ INR investment from partners.",
       "Managed and optimized client relationships, increasing customer retention and leading to 50% more business.",
     ],
-    color: "bg-blue-500/10 border-blue-500/20", // Updated to blue
+    color: "bg-[#1E3A8A]/10 border-[#1E3A8A]/20", // Updated to a darker blue
   },
   {
     title: "Product Analyst Intern",
@@ -57,7 +57,7 @@ const jobs: Job[] = [
       "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%.",
       "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%."
     ],
-    color: "bg-purple-500/10 border-purple-500/20", // Updated to purple
+    color: "bg-[#6D28D9]/10 border-[#6D28D9]/20", // Updated to a darker purple
   }
 ];
 
