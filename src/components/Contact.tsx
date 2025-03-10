@@ -167,13 +167,13 @@ const Contact: React.FC = () => {
                 I'm available for calls and meetings during the following hours:
               </p>
               <div className="space-y-2">
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <span>Monday - Friday</span>
-                  <span>9:00 AM - 5:00 PM GMT</span>
+                  <span className="text-right">9:00 AM - 5:00 PM GMT</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <span>Weekends</span>
-                  <span>By appointment</span>
+                  <span className="text-right">By appointment</span>
                 </div>
               </div>
             </div>
