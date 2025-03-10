@@ -30,15 +30,19 @@ export function useIntersectionObserver(options = {}) {
     });
     
     const elements = containerRef.current?.querySelectorAll('.reveal-item');
-    elements?.forEach((el) => {
-      el.classList.add('opacity-0');
-      observer.observe(el);
-    });
+    if (elements && elements.length > 0) {
+      elements.forEach((el) => {
+        el.classList.add('opacity-0');
+        observer.observe(el);
+      });
+    }
     
     return () => {
-      elements?.forEach((el) => {
-        observer.unobserve(el);
-      });
+      if (elements && elements.length > 0) {
+        elements.forEach((el) => {
+          observer.unobserve(el);
+        });
+      }
     };
   }, [options]);
   
