@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, Github, Twitter } from 'lucide-react';
+import { Linkedin, Mail, Github, Instagram } from 'lucide-react'; // Replaced Twitter with Instagram
 
 const Footer: React.FC = () => {
   return (
@@ -12,17 +12,35 @@ const Footer: React.FC = () => {
               A product management enthusiast focused on creating user-centered digital experiences that drive business growth and customer satisfaction.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a 
+                href="mailto:vishvajeet.patil.work@gmail.com" 
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
                 <Mail className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a 
+                href="https://www.linkedin.com/in/vishvajeet-patil-ucd/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a 
+                href="https://github.com/Vishvajeet9888" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
-                <Twitter className="h-5 w-5" />
+              <a 
+                href="https://www.instagram.com/iam__vishu___?igsh=MWtzdHd5bW50eDYyeA%3D%3D&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                <Instagram className="h-5 w-5" /> {/* Replaced Twitter with Instagram */}
               </a>
             </div>
           </div>
