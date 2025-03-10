@@ -1,13 +1,14 @@
 
 import React, { useRef, useEffect } from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Code, BarChart, Users, Lightbulb, Wrench } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useIntersectionObserver } from '@/utils/animations';
 
 interface SkillCategory {
   title: string;
   color: string;
+  icon: React.ReactNode;
   skills: string[];
-  icon?: React.ReactNode;
   bgClass?: string;
 }
 
@@ -15,87 +16,64 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Strategic Planning",
     color: "text-brand-blue",
-    bgClass: "bg-brand-blue/5 border-brand-blue/20",
+    bgClass: "bg-brand-blue/10 border-brand-blue/30",
     skills: ["Product Development", "Product Roadmapping", "Market Research & Analysis"],
-    icon: <CheckCircle className="text-brand-blue" size={18} />
+    icon: <BarChart className="text-brand-blue" size={24} />
   },
   {
     title: "Technical Proficiency",
     color: "text-brand-purple",
-    bgClass: "bg-brand-purple/5 border-brand-purple/20",
-    skills: ["SQL", "ETL Development", "Pipeline Designing (Informatica)", "Data Warehousing"],
-    icon: <CheckCircle className="text-brand-purple" size={18} />
+    bgClass: "bg-brand-purple/10 border-brand-purple/30",
+    skills: ["SQL", "ETL Development", "Pipeline Designing", "Data Warehousing"],
+    icon: <Code className="text-brand-purple" size={24} />
   },
   {
     title: "Agile Project Management",
     color: "text-brand-green",
-    bgClass: "bg-brand-green/5 border-brand-green/20",
+    bgClass: "bg-brand-green/10 border-brand-green/30",
     skills: [
       "Business Analysis",
       "Product Backlog Grooming",
       "Workshop Facilitation",
-      "Cross-Functional Collaboration",
-      "Conflict Resolution",
-      "Stakeholder Management"
+      "Cross-Functional Collaboration"
     ],
-    icon: <CheckCircle className="text-brand-green" size={18} />
+    icon: <Users className="text-brand-green" size={24} />
   },
   {
     title: "UX & User Research",
     color: "text-brand-orange",
-    bgClass: "bg-brand-orange/5 border-brand-orange/20",
+    bgClass: "bg-brand-orange/10 border-brand-orange/30",
     skills: [
       "Wireframing",
       "Feature Prioritisation",
       "Usability Testing",
-      "Persona Development",
-      "User Journey Mapping",
-      "A/B Testing",
-      "User Interviews"
+      "Persona Development"
     ],
-    icon: <CheckCircle className="text-brand-orange" size={18} />
+    icon: <Lightbulb className="text-brand-orange" size={24} />
   },
   {
     title: "Tools",
     color: "text-brand-teal",
-    bgClass: "bg-brand-teal/5 border-brand-teal/20",
-    skills: ["Jira", "Figma/Whimsical", "Notion", "Lucid Chart", "Miro", "Github", "Microsoft Office"],
-    icon: <CheckCircle className="text-brand-teal" size={18} />
+    bgClass: "bg-brand-teal/10 border-brand-teal/30",
+    skills: ["Jira", "Figma/Whimsical", "Notion", "Lucid Chart", "Miro", "Github"],
+    icon: <Wrench className="text-brand-teal" size={24} />
   }
 ];
 
 const Skills: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const skillCards = containerRef.current?.querySelectorAll('.skill-card');
-    skillCards?.forEach((card) => {
-      observer.observe(card);
-    });
-
-    return () => {
-      skillCards?.forEach((card) => {
-        observer.unobserve(card);
-      });
-    };
-  }, []);
+  const containerRef = useIntersectionObserver();
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+    <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 -left-24 w-96 h-96 bg-brand-purple/5 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-purple">
             My Skills
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -103,80 +81,108 @@ const Skills: React.FC = () => {
           </p>
         </div>
 
-        <div className="skill-container relative" ref={containerRef}>
+        <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {skillCategories.map((category, index) => (
-            <div 
+            <div
               key={category.title}
               className={cn(
-                "skill-card opacity-0 translate-y-8 transition-all duration-700 ease-out",
-                "bg-white rounded-2xl p-6 md:p-8 shadow-lg border",
-                "mb-8 md:mb-12 w-full max-w-4xl mx-auto",
-                category.bgClass,
-                `delay-${index * 100}`
+                "reveal-item opacity-0 rounded-xl p-6 border backdrop-blur-sm transition-all duration-500",
+                "hover:shadow-lg hover:-translate-y-1",
+                category.bgClass
               )}
-              style={{ 
-                transitionDelay: `${index * 150}ms`,
-                transform: `translateY(${30 * (index + 1)}px)`,
-                zIndex: skillCategories.length - index
-              }}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
-                <div className="mb-4 md:mb-0">
-                  <div className={cn(
-                    "inline-flex items-center justify-center rounded-xl",
-                    "h-12 w-12 md:h-16 md:w-16",
-                    "bg-white shadow-sm border",
-                    category.bgClass
-                  )}>
-                    <span className={cn("text-2xl md:text-3xl font-bold", category.color)}>
-                      {index + 1}
-                    </span>
-                  </div>
+              <div className="flex items-start space-x-4">
+                <div className={cn(
+                  "flex-shrink-0 p-3 rounded-lg",
+                  "bg-white shadow-sm"
+                )}>
+                  {category.icon}
                 </div>
                 
-                <div className="flex-1">
-                  <h3 className={cn("text-xl md:text-2xl font-bold mb-3", category.color)}>
+                <div>
+                  <h3 className={cn("text-xl font-bold mb-3", category.color)}>
                     {category.title}
                   </h3>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <ul className="space-y-2">
                     {category.skills.map((skill, i) => (
-                      <div 
-                        key={i} 
-                        className="flex items-center gap-2 text-gray-700 group"
-                      >
+                      <li key={i} className="flex items-center gap-2 text-gray-700">
                         <CheckCircle className={cn("h-4 w-4", category.color)} />
-                        <span className="group-hover:translate-x-1 transition-transform duration-300">
+                        <span className="transition-transform duration-300">
                           {skill}
                         </span>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Skills meter / progress visualization */}
+        <div className="mt-16 reveal-item opacity-0">
+          <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h3 className="text-xl font-bold mb-8 text-center">Proficiency Overview</h3>
+            
+            <div className="space-y-6">
+              {[
+                { name: "Strategic Planning", value: 95, color: "bg-brand-blue" },
+                { name: "Technical Skills", value: 85, color: "bg-brand-purple" },
+                { name: "Agile & Project Management", value: 90, color: "bg-brand-green" },
+                { name: "UX & User Research", value: 92, color: "bg-brand-orange" },
+                { name: "Tools & Platforms", value: 88, color: "bg-brand-teal" }
+              ].map((skill, i) => (
+                <div key={i} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">{skill.name}</span>
+                    <span className="text-sm font-semibold">{skill.value}%</span>
+                  </div>
+                  <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+                    <div 
+                      className={`h-full ${skill.color} skill-bar rounded-full`}
+                      style={{ 
+                        width: `${skill.value}%`,
+                        animation: `progress-animation 1.5s ease-out forwards ${i * 0.2}s`
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <style>
         {`
-        .skill-card {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        
-        .skill-card.show {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        
-        @media (hover: hover) {
-          .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          @keyframes progress-animation {
+            from { width: 0; }
+            to { width: var(--width); }
           }
-        }
+          
+          .skill-bar {
+            --width: 0%;
+            width: var(--width);
+            transition: width 1.5s ease-out;
+          }
+          
+          .reveal-item {
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+          }
+          
+          .reveal-item.reveal {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          
+          @media (hover: hover) {
+            .reveal-item:hover {
+              transform: translateY(-5px);
+            }
+          }
         `}
       </style>
     </section>
