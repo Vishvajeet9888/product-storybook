@@ -58,7 +58,7 @@ const jobs: Job[] = [
       "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%.",
       "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%."
     ],
-    color: "bg-brand-purple/10 border-brand-purple/20", // Changed to brand-purple from Hero section
+    color: "bg-brand-purple border-brand-purple/20", // Changed to brand-purple from Hero section
   }
 ];
 
