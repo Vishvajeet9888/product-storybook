@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { useIntersectionObserver } from '../utils/animations';
-import { Mail, Linkedin, Phone, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Phone, MapPin, Instagram } from 'lucide-react'; // Added Instagram icon
 
 const Contact: React.FC = () => {
   const containerRef = useIntersectionObserver();
@@ -138,6 +137,24 @@ const Contact: React.FC = () => {
                     <p className="text-lg">
                       Dublin, Ireland
                     </p>
+                  </div>
+                </div>
+
+                {/* Added Instagram Contact Information */}
+                <div className="flex items-start">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-500/10 text-pink-500">
+                    <Instagram className="h-5 w-5" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-sm font-medium text-muted-foreground mb-1">Instagram</h4>
+                    <a
+                      href="https://www.instagram.com/iam__vishu___?igsh=MWtzdHd5bW50eDYyeA%3D%3D&utm_source=qr"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-lg hover:text-pink-500 transition-colors duration-300"
+                    >
+                      iam__vishu___
+                    </a>
                   </div>
                 </div>
               </div>
