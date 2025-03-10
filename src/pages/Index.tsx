@@ -9,6 +9,7 @@ import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import ParticleBackground from '../components/ParticleBackground';
 
 const Index = () => {
   // Smooth scroll to section when hash changes
@@ -34,6 +35,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <ParticleBackground />
       <Navbar />
       <Hero />
       <About />
