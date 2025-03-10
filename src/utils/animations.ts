@@ -16,8 +16,11 @@ export function useIntersectionObserver(options = {}) {
             const index = Array.from(entry.target.parentElement.children).indexOf(entry.target);
             (entry.target as HTMLElement).style.zIndex = `${index + 1}`;
           }
+          
+          // Don't unobserve to allow animation to replay when scrolling back
+          // observer.unobserve(entry.target);
         } else {
-          // Optionally remove the class when out of view for re-animation when scrolling back up
+          // Optional: remove the class when out of view for re-animation
           // entry.target.classList.remove('reveal');
         }
       });
