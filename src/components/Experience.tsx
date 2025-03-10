@@ -34,7 +34,7 @@ const jobs: Job[] = [
       "Conducted market research to identify travel content trends and customer preferences, enhanced user engagement by 75%",
       "Created online community groups to support early creators and helped with content strategy and ideas.",
     ],
-    color: "bg-brand-purple border-brand-purple/20",
+    color: "bg-brand-purple/50 border-brand-purple/20",
   },
   {
     title: "Associate Project Manager",
@@ -46,7 +46,7 @@ const jobs: Job[] = [
       "Analysed market trends and competitor strategies to identify new business opportunities leading to 10M+ INR investment from partners.",
       "Managed and optimized client relationships, increasing customer retention and leading to 50% more business.",
     ],
-    color: "bg-brand-blue border-brand-blue/20",
+    color: "bg-brand-blue/50 border-brand-blue/20",
   },
   {
     title: "Product Analyst Intern",
@@ -58,7 +58,7 @@ const jobs: Job[] = [
       "Defined the product roadmap and prioritized key features, improving recommendation speed by 30%.",
       "Worked cross-functionally to implement real-time, location-based search functionality, boosting user satisfaction by 15%."
     ],
-    color: "bg-brand-purple border-brand-purple/20",
+    color: "bg-brand-purple/50 border-brand-purple/20",
   }
 ];
 
