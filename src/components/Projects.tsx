@@ -42,9 +42,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="section-container" ref={containerRef}>
       <div className="text-center max-w-3xl mx-auto mb-16 reveal-item">
-        <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-foreground mb-6">
-          Portfolio Showcase
-        </div>
+        {/* Removed the "Portfolio Showcase" div */}
         <h2 className="section-heading">Projects & Case Studies</h2>
         <p className="section-subheading">
           A selection of my best work that demonstrates my approach to product management and problem-solving.
