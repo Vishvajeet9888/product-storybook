@@ -22,9 +22,14 @@ const About: React.FC = () => {
               I believe true innovation goes beyond building products it's about solving real problems and creating meaningful impact. I combine strategic thinking with practical execution, always keeping the human experience at the center of my decisions. My passion lies in developing scalable solutions that not only enhance user satisfaction but also drive long-term business success.
             </p>
             <div className="flex flex-wrap gap-4">
-              <div className="cta-button">
+              <a 
+                href="https://drive.google.com/drive/folders/1jIhMOQTi6MUcGvIqfYjKxYuUrSltbbSj?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="cta-button"
+              >
                 Download Resume
-              </div>
+              </a>
               <a href="#contact" className="secondary-button">
                 Get in Touch
               </a>
