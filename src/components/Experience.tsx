@@ -22,7 +22,7 @@ const jobs: Job[] = [
       "Designed process mapping for automating repetitive tasks of trade batch processing, reducing the data processing time by 30%.",
       "Led the successful launch of feature reducing the the Budget data discrepancy by 90%.",      
     ],
-    color: "bg-brand-blue border-brand-blue/20",
+    color: "bg-brand-blue/20 border-brand-blue/20",
   },
   {
     title: "Content Creator and Social Media Marketing",
