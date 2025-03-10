@@ -127,20 +127,8 @@ const Contact: React.FC = () => {
                     </a>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange">
-                    <MapPin className="h-5 w-5" />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-sm font-medium text-muted-foreground mb-1">Location</h4>
-                    <p className="text-lg">
-                      Dublin, Ireland
-                    </p>
-                  </div>
-                </div>
 
-                {/* Added Instagram Contact Information */}
+                {/* Moved Instagram Contact Information above Location */}
                 <div className="flex items-start">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-500/10 text-pink-500">
                     <Instagram className="h-5 w-5" />
@@ -155,6 +143,18 @@ const Contact: React.FC = () => {
                     >
                       iam__vishu___
                     </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-orange/10 text-brand-orange">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-sm font-medium text-muted-foreground mb-1">Location</h4>
+                    <p className="text-lg">
+                      Dublin, Ireland
+                    </p>
                   </div>
                 </div>
               </div>
