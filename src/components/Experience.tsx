@@ -34,7 +34,7 @@ const jobs: Job[] = [
       "Conducted market research to identify travel content trends and customer preferences, enhanced user engagement by 75%",
       "Created online community groups to support early creators and helped with content strategy and ideas.",
     ],
-    color: "bg-brand-purple/10 border-brand-purple/20", // Changed to brand-purple from Hero section
+    color: "bg-brand-purple border-brand-purple/20", // Changed to brand-purple from Hero section
   },
   {
     title: "Associate Project Manager",
@@ -46,7 +46,7 @@ const jobs: Job[] = [
       "Analysed market trends and competitor strategies to identify new business opportunities leading to 10M+ INR investment from partners.",
       "Managed and optimized client relationships, increasing customer retention and leading to 50% more business.",
     ],
-    color: "bg-brand-blue/10 border-brand-blue/20", // Changed to brand-blue from Hero section
+    color: "bg-brand-blue border-brand-blue/20", // Changed to brand-blue from Hero section
   },
   {
     title: "Product Analyst Intern",
