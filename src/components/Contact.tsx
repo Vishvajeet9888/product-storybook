@@ -1,10 +1,74 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 import { Mail, Linkedin, Phone, MapPin, Instagram } from 'lucide-react';
 import ParticleBackground from './ParticleBackground';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact: React.FC = () => {
   const containerRef = useIntersectionObserver();
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Using FormSubmit.co as a simple email forwarding service
+      const response = await fetch(`https://formsubmit.co/vishvajeet.patil.work@gmail.com`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _captcha: 'false',
+          _template: 'table'
+        })
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "There was an error sending your message. Please try again later.",
+        variant: "destructive"
+      });
+      console.error('Error sending message:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="bg-secondary/50 relative">
@@ -24,7 +88,7 @@ const Contact: React.FC = () => {
           <div className="glass-card p-8 reveal-item">
             <h3 className="text-2xl font-display font-semibold mb-8">Send a Message</h3>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -34,6 +98,8 @@ const Contact: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all duration-300"
                     required
                   />
@@ -46,6 +112,8 @@ const Contact: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all duration-300"
                     required
                   />
@@ -60,6 +128,8 @@ const Contact: React.FC = () => {
                   type="text"
                   id="subject"
                   name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all duration-300"
                   required
                 />
@@ -73,6 +143,8 @@ const Contact: React.FC = () => {
                   id="message"
                   name="message"
                   rows={6}
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-all duration-300"
                   required
                 ></textarea>
@@ -82,8 +154,9 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   className="cta-button w-full"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>
