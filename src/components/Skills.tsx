@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, Code, BarChart, Users, Lightbulb, Wrench } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -70,7 +69,8 @@ const skillCategories: SkillCategory[] = [
     bgClass: "bg-brand-teal/10 border-brand-teal/30",
     skills: [
       { name: "Jira", logo: "https://w7.pngwing.com/pngs/992/738/png-transparent-jira-hd-logo-thumbnail.png" },
-      { name: "Figma/Whimsical", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" },
+      { name: "Figma", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" },
+      { name: "Whimsical", logo: "https://cdn.freelogovectors.net/wp-content/uploads/2021/07/whimsical-logo-freelogovectors.net_.png" },
       { name: "Notion", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1024px-Notion-logo.svg.png" },
       { name: "Lucid Chart", logo: "https://e7.pngegg.com/pngimages/625/214/png-clipart-lucidchart-logo-thumbnail-tech-companies-thumbnail.png" },
       { name: "Miro", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTBpyf4fNQhCsja9bE93KwwHVgtb1ku2azvg&s" },
