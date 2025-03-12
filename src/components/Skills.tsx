@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, Code, BarChart, Users, Lightbulb, Wrench } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -8,7 +9,10 @@ interface SkillCategory {
   title: string;
   color: string;
   icon: React.ReactNode;
-  skills: string[];
+  skills: Array<{
+    name: string;
+    logo?: string;
+  }>;
   bgClass?: string;
 }
 
@@ -17,14 +21,23 @@ const skillCategories: SkillCategory[] = [
     title: "Strategic Planning",
     color: "text-brand-blue",
     bgClass: "bg-brand-blue/10 border-brand-blue/30",
-    skills: ["Product Development", "Product Roadmapping", "Market Research & Analysis"],
+    skills: [
+      { name: "Product Development" },
+      { name: "Product Roadmapping" },
+      { name: "Market Research & Analysis" }
+    ],
     icon: <BarChart className="text-brand-blue" size={24} />
   },
   {
     title: "Technical Proficiency",
     color: "text-brand-purple",
     bgClass: "bg-brand-purple/10 border-brand-purple/30",
-    skills: ["SQL", "ETL Development", "Pipeline Designing", "Data Warehousing"],
+    skills: [
+      { name: "SQL" },
+      { name: "ETL Development" },
+      { name: "Pipeline Designing" },
+      { name: "Data Warehousing" }
+    ],
     icon: <Code className="text-brand-purple" size={24} />
   },
   {
@@ -32,10 +45,10 @@ const skillCategories: SkillCategory[] = [
     color: "text-brand-green",
     bgClass: "bg-brand-green/10 border-brand-green/30",
     skills: [
-      "Business Analysis",
-      "Product Backlog Grooming",
-      "Workshop Facilitation",
-      "Cross-Functional Collaboration"
+      { name: "Business Analysis" },
+      { name: "Product Backlog Grooming" },
+      { name: "Workshop Facilitation" },
+      { name: "Cross-Functional Collaboration" }
     ],
     icon: <Users className="text-brand-green" size={24} />
   },
@@ -44,10 +57,10 @@ const skillCategories: SkillCategory[] = [
     color: "text-brand-orange",
     bgClass: "bg-brand-orange/10 border-brand-orange/30",
     skills: [
-      "Wireframing",
-      "Feature Prioritisation",
-      "Usability Testing",
-      "Persona Development"
+      { name: "Wireframing" },
+      { name: "Feature Prioritisation" },
+      { name: "Usability Testing" },
+      { name: "Persona Development" }
     ],
     icon: <Lightbulb className="text-brand-orange" size={24} />
   },
@@ -55,7 +68,14 @@ const skillCategories: SkillCategory[] = [
     title: "Tools",
     color: "text-brand-teal",
     bgClass: "bg-brand-teal/10 border-brand-teal/30",
-    skills: ["Jira", "Figma/Whimsical", "Notion", "Lucid Chart", "Miro", "Github"],
+    skills: [
+      { name: "Jira", logo: "https://w7.pngwing.com/pngs/992/738/png-transparent-jira-hd-logo-thumbnail.png" },
+      { name: "Figma/Whimsical", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png" },
+      { name: "Notion", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1024px-Notion-logo.svg.png" },
+      { name: "Lucid Chart", logo: "https://e7.pngegg.com/pngimages/625/214/png-clipart-lucidchart-logo-thumbnail-tech-companies-thumbnail.png" },
+      { name: "Miro", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTBpyf4fNQhCsja9bE93KwwHVgtb1ku2azvg&s" },
+      { name: "Github", logo: "https://banner2.cleanpng.com/20180418/siw/kisspng-github-pages-random-icons-5ad6e9863397c7.5716118315240339262113.jpg" }
+    ],
     icon: <Wrench className="text-brand-teal" size={24} />
   }
 ];
@@ -111,8 +131,15 @@ const Skills: React.FC = () => {
                       <li key={i} className="flex items-center gap-2 text-gray-700">
                         <CheckCircle className={cn("h-4 w-4", category.color)} />
                         <span className="transition-transform duration-300">
-                          {skill}
+                          {skill.name}
                         </span>
+                        {skill.logo && (
+                          <img 
+                            src={skill.logo} 
+                            alt={`${skill.name} logo`} 
+                            className="h-4 w-4 object-contain"
+                          />
+                        )}
                       </li>
                     ))}
                   </ul>
