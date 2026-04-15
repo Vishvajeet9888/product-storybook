@@ -13,7 +13,7 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    title: "Product Analyst",
+    title: "Product Business Analyst",
     company: "Tata Consultancy Services, Ltd",
     period: "2021 - 2024",
     description: "Contributing towards product strategy and execution for the company's financial services client project, overseeing a cross-functional team of designers, engineers, and data analysts.",
@@ -37,7 +37,7 @@ const jobs: Job[] = [
     color: "bg-brand-purple/50 border-brand-purple/20",
   },
   {
-    title: "Associate Project Manager",
+    title: "Junior Business Analyst",
     company: "Guru Gajanan Builders and Developers",
     period: "2020 - 2021",
     description: "Managed the development of large-scale real estate projects development plan and optimising client relationship.",
